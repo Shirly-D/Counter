@@ -1,20 +1,28 @@
-let countDisplay = document.querySelector('.display-count');
-let countMinus = document.querySelector('.count-minus');
-let countAdd = document.querySelector('.count-add');
-let count = 0;
+function counter(count, initialValue, lastValue, duration) {
+    let startTime = null;
+    let currTime = Date();  //get current time
+    
+    const display = (currTime) => {
+        if(!startTime) {  //starttime null, then currtime value assigned to startTime
+            startTime = currTime;
+        }
 
-function numberDisplay() {
-    countDisplay.innerHTML = count;
+        const time = Math.min((currTime - startTime)/duration, 1);  //cal value used in calculating no. that is to be displayed
+        count.innerHTML = Math.floor(time * (lastValue - initialValue) + initialValue); //cal the value getting from time
+
+        if(time < 1) {  //counter should not go beyound lastValue
+            window.requestAnimationFrame(display);
+        } else {
+            window.cancelAnimationFrame(window.requestAnimationFrame(display));
+        }
+    };
+    window.requestAnimationFrame(display);  
 }
 
-countMinus.addEventListener("click", () => {
-    count--;
-    numberDisplay();
-})
+let countDisplay = document.querySelector('.display-count');
 
-countAdd.addEventListener("click", () => {
-    count++;
-    numberDisplay();
+window.addEventListener ("load", () => {
+    counter(countDisplay, 0, 1000, 6000);
 })
 
 
