@@ -138,40 +138,7 @@ section p {
   font-weight: bold;
 }
 
-section div a {
-  padding: 13px 30px;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  color: #FFFFFF;
-  background-color: #0D2C53;
-  text-transform: uppercase;  
-  transition: 1s;
-}
-
-section div a:hover {
-  border: 1px solid #0D2C53;
-  background-color: #F7F7F7;
-  color: #0D2C53;
-}
-
-
-
-
-
-
-
-
-
 /*=================================
   main styling ends here
 =================================*/
 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
