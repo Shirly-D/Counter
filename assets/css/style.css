@@ -115,7 +115,7 @@ main {
 section { padding-top: 80px; }
 
 section .counter { 
-  width: 30%;
+  width: 40%;
   border: 1px solid #FFFFFF;
   padding: 75px 40px;
   margin: 0 auto;
@@ -131,7 +131,20 @@ section h2 {
   text-transform: uppercase;
 }
 
-section p {
+.counter div p {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+section div:first-child { display: inline-block; }
+
+section div:last-child {
+  margin-left: 30%;
+  display: inline-block;
+  vertical-align: top;  
+}
+
+.display-count {
   margin-bottom: 25px;
   color: #008100;
   font-size: 80px;
