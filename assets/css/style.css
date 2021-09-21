@@ -136,9 +136,9 @@ section h2 {
   font-size: 20px;
 }
 
-section div:first-child { display: inline-block; }
+.count-section { display: inline-block; }
 
-section div:last-child {
+.display-section {
   margin-left: 30%;
   display: inline-block;
   vertical-align: top;  
